@@ -4,8 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Mock Library</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1 class="header-title">My Mock Library</h1>
+      <button class="add-book">+ Add Book</button>
+    </header>
+    <main class="main container">
+      <div class="books-grid"></div>
+    </main>
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Ethan Huston
+      </p>
+    </footer>
+    <dialog class="modal">
+      <form class="add-book-form">
+        <h3 class="form-title">Add a Book</h3>
+        <input
+          type="text"
+          id="title"
+          class="title-input"
+          placeholder="Title"
+          maxlength="100"
+          required
+        />
+        <input
+          type="text"
+          id="author"
+          class="author-input"
+          placeholder="Author"
+          maxlength="100"
+          required
+        />
+        <input
+          type="number"
+          id="pages"
+          class="pages-input"
+          placeholder="Pages"
+          max="10000"
+          required
+        />
+        <div class="has-read">
+          <label for="has-read">Have you read it?</label>
+          <input type="checkbox" class="has-read-input" id="has-read" />
+        </div>
+        <button class="button btn-light-green" type="submit">Submit</button>
+      </form>
+    </dialog>
+  </body>
 </html>
